@@ -10,8 +10,15 @@
     "publish:apui2": "gulp -f packages/components/script/publish/index.ts",
     "apui2:dev": "pnpm run --filter ./play dev",
     "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
-    "lint:style": "stylelint --fix \"*.{css,less}\"",
-    "prepare": "husky install"
+    "lint:style": "stylelint --fix \"packages/components/src/**/*.{css,less}\"",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,vue}": [
+      "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
+      "stylelint --fix \"packages/components/src/**/*.{css,less}\""
+    ]
   },
   "keywords": [],
   "author": "",
@@ -39,6 +46,7 @@
     "happy-dom": "^15.11.7",
     "husky": "^9.1.7",
     "less": "^4.2.0",
+    "lint-staged": "^15.2.10",
     "postcss-html": "^1.7.0",
     "prettier": "^3.4.2",
     "release-it": "^17.10.0",
