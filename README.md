@@ -51,3 +51,12 @@ pnpm run docs:dev
 ```
 
 pnpm publish --no-git-checks
+
+
+<!-- 添加本地包 -->
+<!-- pnpm add @aiproui/components@workspace:* -->
+
+<!-- npm publish --access public -->
+
+<!-- 脚手架初始化项目 -->
+<!-- pnpm create apui2 -->
