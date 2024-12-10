@@ -46,7 +46,7 @@ const promptsOptions = [
   {
     type: 'select', //单选
     name: 'template',
-    message: '请选择一个模板11111',
+    message: '请选择一个模板',
     choices: [
       { title: 'apui2', value: 1 },
       { title: 'kitty-ui', value: 2 }
@@ -56,7 +56,7 @@ const promptsOptions = [
 const options = commandLineArgs(optionDefinitions);
 
 const remoteList = {
-  1: "https://github.com/aicong/apui2",
+  1: "https://github.com/aicong/apui2.git",
   2: 'https://gitee.com/geeksdidi/kittyui.git'                                                     
 };
 const getUserInfo = async () => {

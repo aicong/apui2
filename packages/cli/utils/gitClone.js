@@ -4,6 +4,8 @@ import ora from 'ora';
 
 export default (remote, name, option) => {
   const downSpinner = ora('正在下载模板...').start();
+  console.log('remote', remote);
+  console.log('option', option);
   return new Promise((resolve, reject) => {
     download(remote, name, option, (err) => {
       if (err) {                               
